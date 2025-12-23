@@ -136,7 +136,7 @@
             border-color: white;
         }
 
-        /* Navigation */
+/* Navigation */
         nav {
             background: white;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
@@ -147,14 +147,10 @@
         }
 
         nav .container {
-    display: flex;
-    justify-content: space-between; /* 🔥 key change */
-    align-items: center;
-    padding: 22px 24px;
-    max-width: 900px;              /* keeps it tight */
-    margin: 0 auto;
-        }
-
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 22px 24px;
         }
 
         nav a {
@@ -668,6 +664,15 @@
         .contact-card a:hover {
             color: var(--accent);
         }
+        .contact-card { display: block; }
+/* force contact cards to behave like divs */
+        a.contact-card,
+        a.contact-card:visited,
+        a.contact-card:hover,
+        a.contact-card:active {
+        color: inherit !important;
+        text-decoration: none !important;
+        }
 
         /* Footer */
         footer {
@@ -1063,29 +1068,34 @@
         </div>
     </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                    <h3>Email</h3>
-                    <a href="mailto:anuragkoushal1993@gmail.com">anuragkoushal1993@gmail.com</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-                    <h3>LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/anurag-koushal" target="_blank">linkedin.com/in/anurag-koushal</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon"><i class="fab fa-github"></i></div>
-                    <h3>GitHub</h3>
-                    <a href="https://github.com/AnuragKoushal" target="_blank">github.com/AnuragKoushal</a>
-                </div>
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+
+        <div class="contact-grid">
+
+            <a href="mailto:anuragkoushal1993@gmail.com" class="contact-card">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <h3>Email</h3>
                 
-            </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/anurag-koushal" target="_blank" class="contact-card">
+                <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                <h3>LinkedIn</h3>
+                
+            </a>
+
+            <a href="https://github.com/AnuragKoushal" target="_blank" class="contact-card">
+                <div class="contact-icon"><i class="fab fa-github"></i></div>
+                <h3>GitHub</h3>
+                
+            </a>
+
         </div>
-    </section>
+    </div>
+</section>
+
 
     <footer>
         <div class="container">
