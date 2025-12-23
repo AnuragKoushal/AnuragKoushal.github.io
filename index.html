@@ -147,10 +147,14 @@
         }
 
         nav .container {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            padding: 22px 24px;
+    display: flex;
+    justify-content: space-between; /* 🔥 key change */
+    align-items: center;
+    padding: 22px 24px;
+    max-width: 900px;              /* keeps it tight */
+    margin: 0 auto;
+        }
+
         }
 
         nav a {
@@ -211,8 +215,15 @@
             border-radius: 3px;
         }
 
-        /* About */
-        /* ---------- ABOUT SECTION FIX ---------- */
+/* ---------- ABOUT SECTION ALIGNMENT FIX ---------- */
+
+#about {
+    padding: 70px 0; /* reduces excessive vertical gutter */
+}
+
+#about .section-title {
+    margin-bottom: 40px;
+}
 
 .about-content {
     max-width: 900px;
@@ -220,34 +231,23 @@
 }
 
 .about-text {
-    background: white;
-    padding: 40px 45px;
+    background: #ffffff;
+    padding: 36px 40px;            /* tighter, even padding */
     border-radius: 20px;
-    box-shadow: 0 8px 30px var(--shadow);
     border: 2px solid var(--border);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-light);
+    box-shadow: 0 8px 30px var(--shadow);
+    text-align: left;              /* 🔥 ensures clean alignment */
 }
 
-/* Reduce paragraph gaps */
 .about-text p {
-    margin-bottom: 18px;
+    margin-bottom: 16px;           /* consistent paragraph spacing */
+    line-height: 1.75;
 }
 
 .about-text p:last-child {
     margin-bottom: 0;
 }
 
-/* Reduce section vertical spacing ONLY for About */
-#about {
-    padding: 70px 0;
-}
-
-/* Reduce title bottom gap */
-#about .section-title {
-    margin-bottom: 40px;
-}
 
 
         .highlight {
